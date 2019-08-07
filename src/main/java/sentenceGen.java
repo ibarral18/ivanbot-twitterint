@@ -17,6 +17,7 @@ class sentenceGen {
     private String city;
     private String insult;
     private String name;
+    private String verb;
     public sentenceGen (){
         expletive = "C:\\Users\\ibarral\\Documents\\Ivan Intern Files\\IJ proj\\src\\main\\java\\expletives.txt";
         noun = "C:\\Users\\ibarral\\Documents\\Ivan Intern Files\\IJ proj\\src\\main\\java\\nouns.txt";
@@ -28,9 +29,10 @@ class sentenceGen {
         city = "C:\\Users\\ibarral\\Documents\\Ivan Intern Files\\IJ proj\\src\\main\\java\\cities.txt";
         insult = "C:\\Users\\ibarral\\Documents\\Ivan Intern Files\\IJ proj\\src\\main\\java\\insults.txt";
         name = "C:\\Users\\ibarral\\Documents\\Ivan Intern Files\\IJ proj\\src\\main\\java\\names.txt";
+        verb = "C:\\Users\\ibarral\\Documents\\Ivan Intern Files\\IJ proj\\src\\main\\java\\verbs.txt";
     }
 
-    public String getRandomWord(String wordType){
+    private String getRandomWord(String wordType){
         ArrayList<String> wordStorage =  new ArrayList<>();
         try{
             File fileReader = new File(wordType);
@@ -72,6 +74,7 @@ class sentenceGen {
         String thirteen = "@RobiLopezIr is " + getRandomWord(insult);
         String fourteen = "where is " + getRandomWord(name) + " ?";
         String fifteen = getRandomWord(name) + " got not chips";
+        String sixteen = "noooo don't " + getRandomWord(verb) + " ur so sexy ahaha";
         sentenceStorage.add(one);
         sentenceStorage.add(two);
         sentenceStorage.add(three);
@@ -88,6 +91,7 @@ class sentenceGen {
         sentenceStorage.add(thirteen);
         sentenceStorage.add(fourteen);
         sentenceStorage.add(fifteen);
+        sentenceStorage.add(sixteen);
         Random random = new Random();
         int index = random.nextInt(sentenceStorage.size());
         return sentenceStorage.get(index);
