@@ -75,6 +75,7 @@ class sentenceGen {
         String fourteen = "where is " + getRandomWord(name) + " ?";
         String fifteen = getRandomWord(name) + " got not chips";
         String sixteen = "noooo don't " + getRandomWord(verb) + " ur so sexy ahaha";
+        String seventeen = "ivanbot go " + getRandomWord(verb) + "-o mode";
         sentenceStorage.add(one);
         sentenceStorage.add(two);
         sentenceStorage.add(three);
@@ -92,6 +93,7 @@ class sentenceGen {
         sentenceStorage.add(fourteen);
         sentenceStorage.add(fifteen);
         sentenceStorage.add(sixteen);
+        sentenceStorage.add(seventeen);
         Random random = new Random();
         int index = random.nextInt(sentenceStorage.size());
         return sentenceStorage.get(index);
