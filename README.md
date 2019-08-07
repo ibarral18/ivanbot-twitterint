@@ -1,5 +1,5 @@
 # ivanbot-twitterint
-same bot but with twitter !
+same bot but with twitter and much more sentence variance !!
 
 twitter integration using "Twitter4J". 
 
